@@ -20,7 +20,7 @@ class Transfer
   def execute_transaction
     #move amount from sender to receiver
     #states "Transaction rejected. Please check your account balance." if sender does not have enough funds
-  if valid? == true && sender.balance - amount > 0
+  if valid? == true && sender.balance - amount > 0 && status == "pending"
     self.sender.balance -= amount
     self.receiver.balance += amount
     self.status = "complete"
