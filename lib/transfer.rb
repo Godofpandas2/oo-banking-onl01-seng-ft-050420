@@ -18,11 +18,10 @@ class Transfer
   end
 
   def execute_transaction
-
-  end
-
-  def reverse_transaction
-
+    #move amount from sender to receiver
+    #states "Transaction rejected. Please check your account balance." if sender does not have enough funds
+    self.sender.balance -= amount
+    self.receiver.balance += amount
   end
 
   def reverse_transfer
