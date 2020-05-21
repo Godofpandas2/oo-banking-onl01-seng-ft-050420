@@ -27,7 +27,7 @@ class Transfer
   else
     selt.status = "rejected"
   end
-  
+
   end
 
   def reverse_transfer
