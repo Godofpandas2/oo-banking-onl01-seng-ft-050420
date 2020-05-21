@@ -24,6 +24,10 @@ class Transfer
     self.sender.balance -= amount
     self.receiver.balance += amount
     self.status = "complete"
+  else
+    selt.status = "rejected"
+  end
+  
   end
 
   def reverse_transfer
